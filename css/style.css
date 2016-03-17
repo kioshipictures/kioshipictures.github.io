@@ -1,11 +1,92 @@
-body {
-  background: rgba(0,146,241,1);
-  color: #1a1d1f;
-  font-weight: 500;
-  font-size: 1em;
-  font-family: 'Raleway', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: rgba(0,146,241,1);
+    color: #1a1d1f;
+    font-weight: 500;
+    font-size: 1em;
+    font-family: 'Raleway', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url(../images/video-stripe.png), url(../images/video-noise.png);
+    background-repeat: repeat-x, repeat;
+    background-position: 0 0%;
+    background-attachment: fixed;
+    font-size: 21px;
+    font-family: Inconsolata, "Lucida Console", Monaco, Courier, monospace;
+    font-smooth: never;
+    line-height: 2em;
+    color: #d4f8e3;
+    -webkit-font-smoothing: none;
+    text-shadow: -2px 0 0px rgba(0, 0, 225, 0.4), -1px 0 3px rgba(103, 171, 236, 0.6), 1px 0 4px rgba(69, 112, 204, 0.5);
+    
+    -moz-animation: blink 0.1s steps(2, start) infinite, skip 20s linear infinite, flicker 0.1s steps(2, start) infinite;
+      
+    -webkit-animation: blink 0.1s steps(2, start) infinite, skip 20s linear infinite, flicker 0.1s steps(2, start) infinite;
+    
+    animation: blink 0.1s steps(2, start) infinite, skip 20s linear infinite, flicker 0.1s steps(2, start) infinite;
+}
+@-moz-keyframes blink {
+  to {
+    background-color: #0092f7;
+  }
+}
+@-moz-keyframes skip {
+  to {
+    background-position: 0 100%;
+  }
+}
+@-moz-keyframes flicker {
+  to {
+    color: #bddeca;
+  }
+}
+@-moz-keyframes ready {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    background-color: #0092f7;
+  }
+}
+@-webkit-keyframes skip {
+  to {
+    background-position: 0 100%;
+  }
+}
+@-webkit-keyframes ready {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes flicker {
+  to {
+    color: #bddeca;
+  }
+}
+@keyframes blink {
+  to {
+    background-color: #0092f7;
+  }
+}
+@keyframes skip {
+  to {
+    background-position: 0 100%;
+  }
+}
+@keyframes flicker {
+  to {
+    color: #bddeca;
+  }
+}
+
+@keyframes ready {
+  to {
+    visibility: hidden;
+  }
 }
 
 a {
@@ -18,15 +99,18 @@ a:hover {
   color: #304684;
 }
 
-  nav a {
-    color: rgba(255, 255, 255, 0);
-  }
+nav a {
+  color: rgba(255, 255, 255, 0);
+}
 
 .hidden {
   height: 0;
   width: 0;
   overflow: hidden;
   position: absolute;
+  text-indent: -9999px;
+  visibility: hidden;
+  display: none;
 }
 
 
@@ -36,13 +120,8 @@ nav {
   height: 34px;
 }
 
-/* Hides */
-.hidden {
-    text-indent: -9999px;
-    visibility: hidden;
-    display: none;
-}
-/* Centres vertically yo. (IE8+) */
+/* Header */
+
 .cat-hero {
     padding-top: 2em;
 }
@@ -59,6 +138,11 @@ h1.page-title {
     margin: 1.5rem 0 1.68rem 0;
     text-align: center;
 }
-.kioshi {
-    background: rgba(0,146,241,1);
+
+/* Body */
+
+.description-section {
+  background: rgba(0,146,241,1);
+  height: 400px;
 }
+
