@@ -121,28 +121,48 @@ nav {
 }
 
 /* Header */
-
 .cat-hero {
     padding-top: 2em;
 }
 .kioshi-cat {
-    margin-left: 33%;
-    width: 33%;
-    height: 40%;
+    width: 221px;
+    height: 210px;
 }
 h1.page-title {
     color: #304684;
-    font-size: 4.2vw;
+    font-size: 40px;
     font-family: 'Pacifico', cursive;
     line-height: 110%;
-    margin: 1.5rem 0 1.68rem 0;
+    margin: -1.1rem 0 1.68rem 0;
+    text-align: center;
+}
+h2.page-description {
+    color: #304684;
+    font-size: 29px;
+    font-family: "futura-pt", Futura, sans-serif;
+    line-height: 110%;
+    margin: -1.1rem 0 1.68rem 0;
     text-align: center;
 }
 
 /* Body */
 
 .description-section {
-  background: rgba(0,146,241,1);
+/*  background: rgba(0,146,241,1);*/
   height: 400px;
 }
+/* Media Queries */
 
+@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  h1.page-title {
+    font-size: 29px;
+  }
+  h2.page-description {
+    font-size: 18px;
+    font-family: "futura-pt", Futura, sans-serif;
+  }
+  .kioshi-cat {
+    width: 221px;
+    height: 155px;
+}
+}
