@@ -9,7 +9,7 @@ test:
     paths:
     - test
   except:
-  - site
+  - master
 
 pages:
   stage: deploy
@@ -20,4 +20,4 @@ pages:
     paths:
     - public
   only:
-  - site
+  - master
