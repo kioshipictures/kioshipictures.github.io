@@ -2,30 +2,20 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background: rgba(0,146,241,1);
+    background: #0092f7;
     color: #1a1d1f;
     font-weight: 500;
     font-size: 1em;
     font-family: 'Raleway', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url(../images/video-stripe.png), url(../images/video-noise.png);
-    background-repeat: repeat-x, repeat;
-    background-position: 0 0%;
-    background-attachment: fixed;
-    font-size: 21px;
+
     font-family: Inconsolata, "Lucida Console", Monaco, Courier, monospace;
     font-smooth: never;
     line-height: 2em;
     color: #d4f8e3;
     -webkit-font-smoothing: none;
     text-shadow: -2px 0 0px rgba(0, 0, 225, 0.4), -1px 0 3px rgba(103, 171, 236, 0.6), 1px 0 4px rgba(69, 112, 204, 0.5);
-    
-    -moz-animation: blink 0.1s steps(2, start) infinite, skip 20s linear infinite, flicker 0.1s steps(2, start) infinite;
-      
-    -webkit-animation: blink 0.1s steps(2, start) infinite, skip 20s linear infinite, flicker 0.1s steps(2, start) infinite;
-    
-    animation: blink 0.1s steps(2, start) infinite, skip 20s linear infinite, flicker 0.1s steps(2, start) infinite;
 }
 @-moz-keyframes blink {
   to {
@@ -39,7 +29,7 @@
 }
 @-moz-keyframes flicker {
   to {
-    color: #bddeca;
+    color: #0092f7;
   }
 }
 @-moz-keyframes ready {
@@ -64,7 +54,7 @@
 }
 @-webkit-keyframes flicker {
   to {
-    color: #bddeca;
+    color: #0092f7;
   }
 }
 @keyframes blink {
@@ -79,7 +69,7 @@
 }
 @keyframes flicker {
   to {
-    color: #bddeca;
+    color: #0092f7;
   }
 }
 
@@ -115,12 +105,22 @@ nav a {
 
 
 nav {
-  background-color: #304684;
+  background-color: rgba(48,70,132,1);
   box-shadow: 0 0 0 0;
   height: 34px;
 }
 
 /* Header */
+.kioshi {
+    background-image: url(../images/video-stripe.png), url(../images/video-noise.png);
+    background-repeat: repeat-x, repeat;
+    background-position: 0 0%;
+    background-attachment: fixed;
+    -moz-animation: blink 0.1s steps(2, start) infinite, skip 20s linear infinite, flicker 0.1s steps(2, start) infinite;
+    -webkit-animation: blink 0.1s steps(2, start) infinite, skip 20s linear infinite, flicker 0.1s steps(2, start) infinite;
+    animation: blink 0.1s steps(2, start) infinite, skip 20s linear infinite, flicker 0.1s steps(2, start) infinite;
+}
+
 .cat-hero {
     padding-top: 2em;
 }
@@ -148,14 +148,41 @@ h2.page-description {
 /* Body */
 
 .description-section {
-/*  background: rgba(0,146,241,1);*/
+  background: rgba(0,146,241,1);
   height: 400px;
 }
+
+.page-description {
+    margin: 15px 0 0 50px;
+}
+
 /* Media Queries */
+@media only screen and (max-width: 992px) {
+    nav {
+        height: 67px;
+        background-color: rgba(48,70,132,.8);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .kioshi-cat {
+        height: 40%;
+        width: 33% !important;
+        margin-left: 33% !important;
+        padding: 0 !important;
+    }
+    h1.page-title {
+        font-size: 4.2vw;
+    }
+}
 
 @media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
   h1.page-title {
     font-size: 29px;
+  }
+  .page-description {
+      margin: 0;
+      text-align: center;
   }
   h2.page-description {
     font-size: 18px;
