@@ -3,4 +3,5 @@ $(document).ready(function(){
 	$('.collapsible').collapsible({
       accordion : false
 	});
+	$('ul.tabs').tabs();
 });
