@@ -105,7 +105,6 @@ nav a {
 
 
 nav {
-  background-color: rgba(48,70,132,1);
   box-shadow: 0 0 0 0;
 }
 
@@ -121,7 +120,11 @@ nav {
 }
 
 .cat-hero {
-    padding-top: 2em;
+    height: 100vh;
+}
+.market-hero {
+  background-color: rgb(240, 240, 240);
+      height: 100vh;
 }
 .kioshi-cat {
     width: 221px;
