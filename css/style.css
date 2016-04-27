@@ -120,15 +120,16 @@ nav {
 }
 
 .cat-hero {
-    height: 100vh;
+    height: 254px;
 }
 .market-hero {
-  background-color: rgb(240, 240, 240);
-      height: 100vh;
+    background-color: rgb(240, 240, 240);
+    height: 57vh;
 }
 .kioshi-cat {
     width: 221px;
     height: 210px;
+    margin-top: 15px;
 }
 h1.page-title {
     color: #304684;
