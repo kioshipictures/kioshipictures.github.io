@@ -123,8 +123,47 @@ nav {
     height: 254px;
 }
 .market-hero {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
     height: 57vh;
+}
+.market-content {
+    width: 90%;
+    padding: 1em;
+    margin: 0 auto;
+}
+.market-item {
+    width: 33%;
+    float: left;
+    height: 420px;
+    text-align: center;  
+    padding: 15px;
+}
+.market-item-inner {
+  position: relative;
+  height: 100%;
+}
+.market-item-inner:hover {
+  height: 100%;
+  border: 6px solid #1a1d1f;
+}
+.item-text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  background: rgba(20, 20, 20, 0.6);
+  z-index: 999;
+}
+.item-text:hover {
+  opacity: 1;
+}
+.market-item-display {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
 }
 .kioshi-cat {
     width: 221px;

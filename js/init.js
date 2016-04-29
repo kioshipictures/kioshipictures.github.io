@@ -4,4 +4,5 @@ $(document).ready(function(){
       accordion : false
 	});
 	$('ul.tabs').tabs();
+	
 });
