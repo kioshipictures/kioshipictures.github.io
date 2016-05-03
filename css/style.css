@@ -142,10 +142,6 @@ nav {
   position: relative;
   height: 100%;
 }
-.market-item-inner:hover {
-  height: 100%;
-  border: 6px solid #1a1d1f;
-}
 .item-text {
   position: absolute;
   height: 100%;
@@ -153,6 +149,7 @@ nav {
   text-align: center;
   opacity: 0;
   background: rgba(20, 20, 20, 0.6);
+  border: 6px solid #1a1d1f;
   z-index: 999;
 }
 .item-text:hover {
